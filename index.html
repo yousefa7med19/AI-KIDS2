@@ -7,13 +7,21 @@
   <meta name="description"
     content="AI Kids makes artificial intelligence, games, and positive habits fun for children ages 7–10.">
   <title>AI Kids — Learn, Play, Grow Future</title>
+      <meta name="keywords" content="AI Kids, Artificial Intelligence for Kids, Learn AI, Kids Education, Coding for Kids , Kids , AI ">
+      <meta name="author" content="AI Kids Team">
+      <meta property="og:title" content="AI Kids">
+      <meta property="og:description"
+content="Learn AI through games and adventures.">
+<meta property="og:image"
+content="../assets/images/logo.png">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;600;700;800&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+<link rel="stylesheet" href="assets/css/homepage.css">
+<script src="assets/js/homepage.js"defer></script>
 </head>
 
 <body>
@@ -25,15 +33,17 @@
       </a>
       <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Open navigation">☰</button>
       <nav id="main-nav" class="main-nav" aria-label="Main navigation">
-        <a class="active" href="#top">Home</a><a href="pages/courses.html">Courses</a><a
-          href="pages/games.html">Games</a>
-        <a href="pages/habit-builder.html">Habit Builder</a><a href="pages/parents.html">For Parents</a><a
-          href="#pricing">Pricing</a>
+        <a class="active" href="#top">Home</a>
+        <a href="pages/courses.html">Courses</a>
+        <a href="pages/games.html">Games</a>
+        <a href="pages/habit-builder.html">Habit Builder</a>
+        <a href="pages/parents.html">For Parents</a>
+        <a href="#pricing">Pricing</a>
       </nav>
       <div class="nav-actions">
         <button class="language" type="button">🌐 EN⌄</button>
-        <a class="btn btn-outline" href="pages/login.html">Log In</a>
-        <a class="btn btn-primary btn-small" href="pages/signup.html">Start Free Adventure 🚀</a>
+        <a href="login.html" class="btn">Login</a>      
+         <a class="btn btn-primary btn-small" href="#age">Start Free Adventure 🚀</a>
       </div>
     </div>
   </header>
@@ -50,19 +60,26 @@
           <div class="hero-buttons">
             <a class="btn btn-yellow" href="#age">Start Free Adventure 🚀</a>
             <button id="watchBtn" onclick="window.location.href='pages/watchDemo.html'">
-              Watch Demo
+                Watch Demo
             </button>
             <video id="myVideo" width="700" controls style="display: none;">
               <source src="video.mp4" type="video/mp4">
               Your browser does not support the video tag.
             </video>
           </div>
+          <div class="social-proof"><span class="avatars">👧🏽👦🏻👧🏻👦🏽</span><span><b>★★★★★</b><small>Trusted by
+                10,000+ Parents</small></span></div>
         </div>
-        <div class="social-proof"><span class="avatars">👧🏽👦🏻👧🏻👦🏽</span><span><b>★★★★★</b><small>Trusted by
-              10,000+ Parents</small></span></div>
-      </div>
-      <div class="hero-visual" role="img" aria-label="A cheerful child learning AI with a friendly robot"></div>
-      </div>
+        <div class="hero-visual image-animation">
+    <img
+        src="images/boy using laptop white part.png"
+        alt="AI Kids Hero"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
+    >
+</div>
+        </div>
       <div class="wave"></div>
     </section>
 
@@ -86,7 +103,14 @@
             <p>See your child’s growth and achievements.</p>
           </article>
         </div>
-        <div class="family-image" role="img" aria-label="Parents learning together with their child"></div>
+        <div class="hero-visual image-animation">
+    <img
+        src="images/parents white background.png"
+        alt="AI Kids Hero"
+        loading="lazy"
+        decoding="async"
+    >
+</div>
       </div>
     </section>
 
@@ -114,25 +138,25 @@
           <article class="age-card age-green" data-age="7">
             <h3>7 Years</h3>
             <div class="age-art age7"></div>
-            <p>Begin your AI adventure with fun stories and games.</p><button type="button" data-path="signup"
+            <p>Begin your AI adventure with fun stories and games.</p><button type="button" data-path="pages/signup"
               data-age="7">Start for 7 Year Olds →</button>
           </article>
           <article class="age-card age-orange" data-age="8">
             <h3>8 Years</h3>
             <div class="age-art age8"></div>
-              <p>Explore, learn and create amazing AI projects.</p><button type="button" data-path="signup"
+              <p>Explore, learn and create amazing AI projects.</p><button type="button" data-path="pages/signup"
                 data-age="8">Start for 8 Year Olds →</button>
           </article>
           <article class="age-card age-purple" data-age="9">
             <h3>9 Years</h3>
             <div class="age-art age9"></div>
-            <p>Build skills and solve real-world problems.</p><button type="button" data-path="signup"
+            <p>Build skills and solve real-world problems.</p><button type="button" data-path="pages/signup"
               data-age="9">Start for 9 Year Olds →</button>
           </article>
           <article class="age-card age-blue" data-age="10">
             <h3>10 Years</h3>
             <div class="age-art age10"></div>
-            <p>Level up your AI knowledge and build your future.</p><button type="button" data-path="signup"
+            <p>Level up your AI knowledge and build your future.</p><button type="button" data-path="pages/signup"
               data-age="10">Start for 10 Year Olds →</button>
           </article>
         </div>
@@ -208,7 +232,7 @@
               <li>Interactive Lessons</li>
               <li>Basic Habit Builder</li>
               <li>Progress Tracking</li>
-            </ul><a class="btn btn-outline-green" href="pages/signup.html?plan=basic">Get Started</a>
+            </ul><button class="btn btn-outline-green">Get Started</button>
           </article>
           <article class="price-card premium"><span class="popular">Most Popular</span>
             <h3>Premium</h3>
@@ -221,7 +245,7 @@
               <li>All Games &amp; Activities</li>
               <li>Detailed Progress Reports</li>
               <li>Certificates &amp; Rewards</li>
-            </ul><a class="btn btn-primary" href="pages/signup.html?plan=premium">Choose Premium</a>
+            </ul><button class="btn btn-primary">Choose Premium</button>
           </article>
           <article class="price-card family">
             <h3>Family</h3>
@@ -234,7 +258,7 @@
               <li>Parent Dashboard</li>
               <li>Priority Support</li>
               <li>Exclusive Content &amp; Rewards</li>
-            </ul><a class="btn btn-outline-blue" href="pages/signup.html?plan=family">Choose Family</a>
+            </ul><button class="btn btn-outline-blue">Choose Family</button>
           </article>
         </div>
       </div>
@@ -249,7 +273,7 @@
     </div>
   </footer>
   <div class="toast" role="status" aria-live="polite"></div>
-  <script src="assets/js/main.js" defer></script>
+  
 </body>
 
 </html>
