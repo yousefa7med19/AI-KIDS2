@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Kids — Sign Up</title>
+  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#10184b;--purple:#4b16ef;--purple2:#711cff;--blue:#1688ff;--yellow:#ffc928;--line:#e8e8f7}
+*{box-sizing:border-box}
+body{margin:0;font-family:Nunito,Arial,sans-serif;color:var(--navy);background:linear-gradient(135deg,#10025f,#4930e4);min-height:100vh}
+a{text-decoration:none}
+.page-header{height:82px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 5%;box-shadow:0 8px 25px rgba(0,0,0,.12)}
+.brand{font-family:"Baloo 2",sans-serif;font-size:30px;font-weight:800;color:#ff9d00}.brand b{color:#5422ef}
+.back{color:var(--purple);font-weight:800}
+.page-main{min-height:calc(100vh - 82px);display:grid;place-items:center;padding:40px 20px}
+.auth-card{width:min(520px,100%);background:#fff;border-radius:24px;padding:38px;box-shadow:0 24px 60px rgba(11,5,77,.3)}
+.auth-card h1{font:800 42px "Baloo 2",sans-serif;text-align:center;margin:0}
+.subtitle{text-align:center;color:#606887;margin:2px 0 28px}
+label{display:block;font-weight:800;margin:16px 0 7px}
+input,select{width:100%;padding:14px;border:1px solid #ced2e8;border-radius:10px;font:600 16px Nunito,sans-serif}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.submit{width:100%;border:0;border-radius:10px;padding:15px;margin-top:24px;background:linear-gradient(135deg,var(--purple2),var(--purple));color:#fff;font:800 17px Nunito,sans-serif;cursor:pointer}
+.helper{text-align:center;margin-top:18px}.helper a{color:var(--purple);font-weight:800}
+.status{min-height:22px;text-align:center;color:var(--purple);font-weight:800;margin-top:14px}
+@media(max-width:560px){.page-header{height:68px}.page-main{min-height:calc(100vh - 68px)}.auth-card{padding:26px 20px}.row{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="page-header">
+  <a class="brand" href="../index.html"><b>AI</b> Kids</a>
+  <a class="back" href="../index.html">← Home</a>
+</header>
+<main class="page-main">
+<form class="auth-card" id="signup-form">
+  <h1>Start Free</h1>
+  <p class="subtitle">Create the parent account and select your child’s learning path.</p>
+  <div class="row">
+    <div><label for="parent-name">Parent Name</label><input id="parent-name" required placeholder="Parent name"></div>
+    <div><label for="child-name">Child Name</label><input id="child-name" required placeholder="Child name"></div>
+  </div>
+  <label for="email">Email Address</label>
+  <input id="email" type="email" autocomplete="email" required placeholder="parent@example.com">
+  <div class="row">
+    <div><label for="age">Child Age</label><select id="age"><option value="">Choose age</option><option>7</option><option>8</option><option>9</option><option>10</option></select></div>
+    <div><label for="plan">Plan</label><select id="plan"><option value="">Choose plan</option><option value="basic">Basic</option><option value="premium">Premium</option><option value="family">Family</option></select></div>
+  </div>
+  <label for="password">Create Password</label>
+  <input id="password" type="password" autocomplete="new-password" minlength="8" required placeholder="At least 8 characters">
+  <button class="submit" type="submit">Create Account</button>
+  <div class="status" id="status" role="status"></div>
+  <p class="helper">Already registered? <a href="login.html">Log in</a></p>
+</form>
+</main>
+<script>
+const params = new URLSearchParams(location.search);
+if (params.get('age')) document.getElementById('age').value = params.get('age');
+if (params.get('plan')) document.getElementById('plan').value = params.get('plan');
+document.getElementById('signup-form').addEventListener('submit', function(event){
+  event.preventDefault();
+  document.getElementById('status').textContent = 'Registration interface is ready for backend integration.';
+});
+</script>
+</body>
+</html>
