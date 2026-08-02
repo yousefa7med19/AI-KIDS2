@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Complete your AI Kids subscription securely.">
+    <link rel="icon" type="image/png" href="../assets/images/logo.png">
+  <title>Secure Checkout — AI Kids</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/payment.css">
+  <script src="../assets/js/payment.js" defer></script>
+</head>
+<body>
+  <header class="checkout-header">
+    <a class="brand" href="../index.html" aria-label="AI Kids home">
+      <span class="brand-icon">🤖</span>
+      <span><strong><b>AI</b> Kids</strong><small>Learn. Play. Grow Future.</small></span>
+    </a>
+    <div class="secure-label">🔒 Secure Checkout</div>
+  </header>
+
+  <main class="checkout-shell">
+    <section class="checkout-main">
+      <a class="back-link" href="../index.html#pricing">← Back to plans</a>
+      <div class="step-row" aria-label="Checkout progress">
+        <span class="step done">✓</span><span class="step-line active"></span>
+        <span class="step active">2</span><span class="step-line"></span>
+        <span class="step">3</span>
+      </div>
+      <div class="step-labels"><span>Choose plan</span><span>Payment</span><span>Welcome</span></div>
+
+      <div class="card payment-card">
+        <div class="section-title">
+          <div><p class="eyebrow">Almost there!</p><h1>Complete your payment</h1></div>
+          <span class="shield">🛡️</span>
+        </div>
+        <p class="muted">Choose your preferred payment method. Your information is protected.</p>
+
+        <div class="payment-tabs" role="tablist">
+          <button class="payment-tab active" data-method="card" type="button">💳 Card</button>
+          <button class="payment-tab" data-method="wallet" type="button">📱 Mobile Wallet</button>
+          <button class="payment-tab" data-method="fawry" type="button">🏪 Fawry</button>
+        </div>
+
+        <form id="paymentForm" novalidate>
+          <div class="payment-panel active" data-panel="card">
+            <label>Cardholder name<input name="cardName" autocomplete="cc-name" placeholder="Name on card" required></label>
+            <label>Card number<div class="input-icon"><input name="cardNumber" inputmode="numeric" autocomplete="cc-number" maxlength="19" placeholder="1234 5678 9012 3456" required><span>💳</span></div></label>
+            <div class="two-cols">
+              <label>Expiry date<input name="expiry" inputmode="numeric" autocomplete="cc-exp" maxlength="5" placeholder="MM/YY" required></label>
+              <label>CVV<div class="input-icon"><input name="cvv" inputmode="numeric" autocomplete="cc-csc" maxlength="4" placeholder="123" required><span title="3 or 4 digit security code">?</span></div></label>
+            </div>
+          </div>
+
+          <div class="payment-panel" data-panel="wallet">
+            <label>Mobile wallet number<input name="walletNumber" inputmode="tel" placeholder="01XXXXXXXXX"></label>
+            <div class="notice">You will receive a confirmation request on your mobile wallet.</div>
+          </div>
+
+          <div class="payment-panel" data-panel="fawry">
+            <label>Mobile number<input name="fawryNumber" inputmode="tel" placeholder="01XXXXXXXXX"></label>
+            <div class="notice">A Fawry reference code will be generated after confirmation.</div>
+          </div>
+
+          <label class="check-row"><input type="checkbox" id="agree" required><span>I agree to the Terms of Service and recurring billing policy.</span></label>
+          <button class="pay-btn" type="submit"><span>Pay securely</span><strong id="payAmount">EGP 299</strong></button>
+          <p id="formMessage" class="form-message" aria-live="polite"></p>
+        </form>
+
+        <div class="trust-strip"><span>🔐 256-bit SSL</span><span>↩ 7-day money-back guarantee</span><span>🚫 Cancel anytime</span></div>
+      </div>
+    </section>
+
+    <aside class="card order-card">
+      <p class="eyebrow">Your subscription</p>
+      <h2>Order summary</h2>
+      <div class="plan-box">
+        <div><span id="planBadge">⭐ Most Popular</span><h3 id="planName">Premium Plan</h3><p id="billingText">Billed monthly</p></div>
+        <button id="changePlan" type="button">Change</button>
+      </div>
+      <ul id="planFeatures">
+        <li>✓ Access to all courses</li>
+        <li>✓ All games & activities</li>
+        <li>✓ Advanced Habit Builder</li>
+        <li>✓ Detailed progress reports</li>
+        <li>✓ Certificates & rewards</li>
+      </ul>
+      <div class="coupon-row"><input id="couponInput" placeholder="Coupon code"><button id="applyCoupon" type="button">Apply</button></div>
+      <p id="couponMessage" class="coupon-message"></p>
+      <div class="price-lines">
+        <div><span>Subtotal</span><span id="subtotal">EGP 299</span></div>
+        <div><span>Discount</span><span id="discount">EGP 0</span></div>
+        <div class="total"><strong>Total today</strong><strong id="total">EGP 299</strong></div>
+      </div>
+      <div class="parent-note"><span>👨‍👩‍👧</span><p><strong>Built for families</strong><br>Your child learns in a safe, ad-free environment while you follow their progress.</p></div>
+    </aside>
+  </main>
+
+  <footer>© 2026 AI Kids · Secure payment experience</footer>
+</body>
+</html>

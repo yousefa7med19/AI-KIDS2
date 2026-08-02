@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Explore fun, interactive AI courses designed for kids ages 7–10. Learn artificial intelligence through games, stories, hands-on projects, and exciting challenges with AI Kids..">
+  <title>AI Kids — Courses</title>
+  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/courses.css">
+  <link rel="stylesheet" href="courses.css">
+  <script src="homepage.js"></script>
+
+</head>
+
+<body>
+  <header class="course-header">
+    <a class="course-brand" href="../index.html"><span>🤖</span><b><i>AI</i> Kids<small>Learn · Play ·
+          Create</small></b></a>
+    <button class="course-menu" aria-expanded="false" aria-controls="course-nav">☰</button>
+    <nav id="course-nav">
+      <a href="../index.html">Home</a>
+      <a class="active" href="courses.html">Courses</a>
+      <a href="games.html">Games</a>
+      <a href="habit-builder.html">Habit Builder</a>
+      <a href="parents.html">Parents</a>
+      <a href="../index.html#pricing">Pricing</a>
+    </nav>
+    <div class="course-actions"><button class="search-button" aria-label="Search courses">⌕</button>
+      <a class="login-button" href="login.html">Login</a>
+      <a class="start-button" href="signup.html">Start Free Adventure
+        🚀</a></div>
+  </header>
+
+  <main>
+    <section class="courses-hero">
+      <div class="hero-character robot" aria-hidden="true">🤖</div>
+      <div class="hero-title">
+        <h1>All Courses</h1>
+        <p>Fun, interactive and age-appropriate AI courses that<br>spark curiosity and build real skills.</p>
+      </div>
+      <div class="hero-character learner" aria-hidden="true">👦🏻💻</div>
+    </section>
+
+    <section class="catalog-shell">
+      <div class="age-filter" aria-label="Filter courses by age">
+        <span>Choose age group</span>
+        <button class="selected" data-age="all">All Ages</button><button data-age="7">🐉 7 Years</button><button
+          data-age="8">🦊 8 Years</button><button data-age="9">🐼 9 Years</button><button data-age="10">🦉 10
+          Years</button>
+        <select id="sort-courses" aria-label="Sort courses">
+          <option value="popular">Sort by: Popular</option>
+          <option value="newest">Newest</option>
+          <option value="progress">Progress</option>
+        </select>
+      </div>
+
+      <div class="category-filter" aria-label="Filter courses by category">
+        <button class="selected" data-category="all"><span>▦</span>All Courses</button>
+        <button data-category="basics"><span>🧠</span>AI Basics</button>
+        <button data-category="prompt"><span>💬</span>Prompt Engineering</button>
+        <button data-category="creative"><span>🎨</span>AI Creativity</button>
+        <button data-category="tools"><span>🛠️</span>AI Tools</button>
+        <button data-category="projects"><span>🚀</span>AI Projects</button>
+        <button data-category="logic"><span>📊</span>Data &amp; Logic</button>
+        <button data-category="safety"><span>🛡️</span>Ethics &amp; Safety</button>
+      </div>
+
+      <div class="course-grid" id="course-grid">
+        <article class="course-card" data-age="7,8" data-category="basics" data-popularity="98" data-progress="75">
+          <div class="course-art art-green"><span class="badge beginner">Beginner</span><button class="heart"
+              aria-label="Save Welcome to AI">♡</button>
+            <div class="art-emoji">🤖<small>AI</small></div><button class="demo-play" data-demo="Welcome to AI!"
+              aria-label="Play demo video">▶ Demo</button>
+          </div>
+          <div class="course-content">
+            <h2>Welcome to AI!</h2>
+            <p>Discover what AI is and how it works in the real world.</p>
+            <div class="course-meta"><span>📖 10 Lessons</span><span>◷ 1h 30m</span><span>♙ 7–8 yrs</span></div>
+            <div class="progress"><i style="width:75%"></i></div>
+            <div class="course-footer"><strong>75% Completed</strong><a class="course-open-button"
+                href="global-thinkers.html">Continue</a></div>
+          </div>
+        </article>
+
+        <article class="course-card" data-age="8,9" data-category="basics,logic" data-popularity="100"
+          data-progress="40">
+          <div class="course-art art-purple"><span class="badge popular">Popular</span><button class="heart"
+              aria-label="Save How AI Thinks">♡</button>
+            <div class="art-emoji">💡<small>AI</small></div><button class="demo-play" data-demo="How AI Thinks"
+              aria-label="Play demo video">▶ Demo</button>
+          </div>
+          <div class="course-content">
+            <h2>How AI Thinks</h2>
+            <p>Understand how machines learn and make decisions.</p>
+            <div class="course-meta"><span>📖 12 Lessons</span><span>◷ 2h 10m</span><span>♙ 8–9 yrs</span></div>
+            <div class="progress"><i style="width:40%"></i></div>
+            <div class="course-footer"><strong>40% Completed</strong><a class="course-open-button"
+                href="global-thinkers.html">Continue</a></div>
+          </div>
+        </article>
+
+        <article class="course-card" data-age="7,8,9,10" data-category="creative,tools" data-popularity="93"
+          data-progress="20">
+          <div class="course-art art-blue"><span class="badge new">New</span><button class="heart"
+              aria-label="Save AI Art Creator">♡</button>
+            <div class="art-emoji">🎨<small>AI</small></div><button class="demo-play" data-demo="AI Art Creator"
+              aria-label="Play demo video">▶ Demo</button>
+          </div>
+          <div class="course-content">
+            <h2>AI Art Creator</h2>
+            <p>Use AI tools to create amazing art, images and designs.</p>
+            <div class="course-meta"><span>📖 8 Lessons</span><span>◷ 1h 20m</span><span>♙ 7–10 yrs</span></div>
+            <div class="progress orange"><i style="width:20%"></i></div>
+            <div class="course-footer orange-text"><strong>20% Completed</strong><a class="course-open-button"
+                href="global-thinkers.html">Continue</a></div>
+          </div>
+        </article>
+
+        <article class="course-card" data-age="9,10" data-category="prompt,projects" data-popularity="99"
+          data-progress="60">
+          <div class="course-art art-pink"><span class="badge popular">Popular</span><button class="heart"
+              aria-label="Save Build Your First Chatbot">♡</button>
+            <div class="art-emoji">💬<small>BOT</small></div><button class="demo-play"
+              data-demo="Build Your First Chatbot" aria-label="Play demo video">▶ Demo</button>
+          </div>
+          <div class="course-content">
+            <h2>Build Your First Chatbot</h2>
+            <p>Create your own AI chatbot and bring it to life!</p>
+            <div class="course-meta"><span>📖 14 Lessons</span><span>◷ 2h 30m</span><span>♙ 9–10 yrs</span></div>
+            <div class="progress"><i style="width:60%"></i></div>
+            <div class="course-footer"><strong>60% Completed</strong><a class="course-open-button"
+                href="global-thinkers.html">Continue</a></div>
+          </div>
+        </article>
+
+        <article class="course-card" data-age="7,8" data-category="safety" data-popularity="90" data-progress="0">
+          <div class="course-art art-teal"><span class="badge new">New</span><button class="heart"
+              aria-label="Save Smart and Safe Online">♡</button>
+            <div class="art-emoji">🛡️<small>SAFE</small></div><button class="demo-play"
+              data-demo="Smart and Safe Online" aria-label="Play demo video">▶ Demo</button>
+          </div>
+          <div class="course-content">
+            <h2>Smart &amp; Safe Online</h2>
+            <p>Learn how to use AI responsibly, safely and kindly.</p>
+            <div class="course-meta"><span>📖 7 Lessons</span><span>◷ 55m</span><span>♙ 7–8 yrs</span></div>
+            <div class="progress"><i style="width:0%"></i></div>
+            <div class="course-footer"><strong>Not started</strong><a class="course-open-button"
+                href="global-thinkers.html">Continue</a></div>
+          </div>
+        </article>
+
+        <article class="course-card" data-age="8,9" data-category="prompt" data-popularity="95" data-progress="10">
+          <div class="course-art art-violet"><span class="badge beginner">Beginner</span><button class="heart"
+              aria-label="Save Prompt Power">♡</button>
+            <div class="art-emoji">✨<small>ASK</small></div><button class="demo-play" data-demo="Prompt Power"
+              aria-label="Play demo video">▶ Demo</button>
+          </div>
+          <div class="course-content">
+            <h2>Prompt Power</h2>
+            <p>Learn how to ask clear questions and get better AI answers.</p>
+            <div class="course-meta"><span>📖 9 Lessons</span><span>◷ 1h 15m</span><span>♙ 8–9 yrs</span></div>
+            <div class="progress"><i style="width:10%"></i></div>
+            <div class="course-footer"><strong>10% Completed</strong><a class="course-open-button"
+                href="global-thinkers.html">Continue</a></div>
+          </div>
+        </article>
+
+        <article class="course-card" data-age="9,10" data-category="logic,projects" data-popularity="92"
+          data-progress="0">
+          <div class="course-art art-orange"><span class="badge popular">Popular</span><button class="heart"
+              aria-label="Save Data Detective">♡</button>
+            <div class="art-emoji">📊<small>DATA</small></div><button class="demo-play" data-demo="Data Detective"
+              aria-label="Play demo video">▶ Demo</button>
+          </div>
+          <div class="course-content">
+            <h2>Data Detective</h2>
+            <p>Spot patterns, compare information and solve data mysteries.</p>
+            <div class="course-meta"><span>📖 11 Lessons</span><span>◷ 1h 50m</span><span>♙ 9–10 yrs</span></div>
+            <div class="progress"><i style="width:0%"></i></div>
+            <div class="course-footer"><strong>Not started</strong><a class="course-open-button"
+                href="global-thinkers.html">Continue</a></div>
+          </div>
+        </article>
+
+        <article class="course-card" data-age="10" data-category="tools,projects" data-popularity="97"
+          data-progress="0">
+          <div class="course-art art-indigo"><span class="badge new">New</span><button class="heart"
+              aria-label="Save AI Inventor Lab">♡</button>
+            <div class="art-emoji">🚀<small>LAB</small></div><button class="demo-play" data-demo="AI Inventor Lab"
+              aria-label="Play demo video">▶ Demo</button>
+          </div>
+          <div class="course-content">
+            <h2>AI Inventor Lab</h2>
+            <p>Plan and build a creative AI project from idea to presentation.</p>
+            <div class="course-meta"><span>📖 15 Lessons</span><span>◷ 3h</span><span>♙ 10 yrs</span></div>
+            <div class="progress"><i style="width:0%"></i></div>
+            <div class="course-footer"><strong>Not started</strong><a class="course-open-button"
+                href="global-thinkers.html">Continue</a></div>
+          </div>
+        </article>
+      </div>
+      <p class="empty-state" id="empty-state" hidden>No courses match these filters yet.</p>
+    </section>
+  </main>
+
+  <div class="demo-modal" id="demo-modal" hidden>
+    <div class="demo-dialog" role="dialog" aria-modal="true" aria-labelledby="demo-title">
+      <button class="demo-close" aria-label="Close demo">×</button>
+      <div class="video-placeholder"><span>▶</span>
+        <p>Demo video placeholder</p>
+      </div>
+      <h2 id="demo-title">Course Demo</h2>
+      <p>This is a front-end demo area. Course videos will be uploaded and managed later from the backend control panel.
+      </p>
+      <button class="demo-primary">Got it</button>
+    </div>
+  </div>
+
+  <div class="course-toast" id="course-toast" role="status" aria-live="polite"></div>
+  <script src="../assets/js/courses.js" defer></script>
+  <footer class="footer">
+    <div class="footer-container">
+
+      <div class="footer-logo">
+        <h2>🤖 AI Kids</h2>
+        <p>Learn • Play • Create</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <a href="ai-kids-homepage-standalone.html">Home</a>
+        <a href="courses.html">Courses</a>
+        <a href="games.html">Games</a>
+        <a href="parents.html">Parents</a>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contact</h3>
+        <a href="mailto:artificail0kids@gmail.com">📧 Email</a>
+        <a href="tel:01027137030">📞 Phone</a>
+      </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+      © 2026 AI Kids. All Rights Reserved.
+    </p>
+
+    <button id="backToTop">⬆</button>
+  </footer>
+</body>
+
+</html>

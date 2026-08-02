@@ -1,0 +1,92 @@
+
+:root{--ink:#101746;--purple:#5c20e9;--purple2:#7527f3;--line:#e5e6f5;--muted:#66708d;--green:#22b95b;--orange:#ff8a16}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Nunito,Arial,sans-serif;color:var(--ink);background:#fbfbff}.course-header{height:98px;padding:0 3.2%;display:flex;align-items:center;gap:34px;background:#fff;position:sticky;top:0;z-index:40;box-shadow:0 3px 16px #20126d0d}.course-brand{display:flex;align-items:center;gap:10px;color:#ff9f12;text-decoration:none;font:800 33px 'Baloo 2',sans-serif;white-space:nowrap}.course-brand>span{font-size:40px}.course-brand b{line-height:.85}.course-brand i{font-style:normal;color:#5c20e9}.course-brand small{display:block;color:#18204e;font:700 12px Nunito,sans-serif;margin-top:8px}.course-header nav{display:flex;align-items:center;justify-content:center;gap:40px;flex:1}.course-header nav a{color:#151634;text-decoration:none;font-weight:700;font-size:16px;padding:35px 0 25px;position:relative}.course-header nav a.active{color:var(--purple)}.course-header nav a.active:after{content:'';height:4px;border-radius:4px;background:var(--purple);position:absolute;left:0;right:0;bottom:21px}.course-actions{display:flex;align-items:center;gap:14px}.search-button,.login-button,.start-button{height:48px;border-radius:13px;display:grid;place-items:center;text-decoration:none;font-weight:800}.search-button{width:48px;border:1px solid var(--line);background:#fff;font-size:27px}.login-button{min-width:86px;border:1.5px solid var(--purple);color:var(--purple)}.start-button{padding:0 22px;background:linear-gradient(135deg,#6c28ed,#4815d4);color:#fff}.course-menu{display:none}
+.courses-hero{height:215px;display:grid;grid-template-columns:1fr minmax(470px,650px) 1fr;align-items:center;overflow:hidden;background:radial-gradient(circle at 50% 15%,#fff 0,#f7f5ff 55%,#efedff 100%);position:relative}.courses-hero:before{content:'✦   •   ★        ✦      •      ★';position:absolute;inset:30px 3%;color:#a89af7;font-size:25px;word-spacing:70px;opacity:.7}.hero-title{text-align:center;position:relative;z-index:2}.hero-title h1{font:800 58px 'Baloo 2',sans-serif;margin:0}.hero-title p{font-size:19px;line-height:1.5;margin:3px 0;color:#343653}.hero-character{text-align:center;position:relative;z-index:2;font-size:112px;filter:drop-shadow(0 15px 16px #4523a82c)}.hero-character.learner{font-size:95px}
+.catalog-shell{width:min(1420px,95%);margin:-2px auto 70px}.age-filter{min-height:94px;background:#fff;border-radius:30px 30px 0 0;padding:20px 24px;display:flex;align-items:center;gap:15px;box-shadow:0 10px 30px #28166b10}.age-filter>span{font-size:17px;margin-right:10px}.age-filter button{padding:13px 29px;border-radius:13px;border:1px solid #dfe1ef;background:#fff;color:var(--ink);font-weight:800;font-size:15px;cursor:pointer}.age-filter button.selected{background:linear-gradient(135deg,#7027ed,#4817db);color:#fff;border-color:transparent}.age-filter select{margin-left:auto;border:1px solid #dfe1ef;background:#fff;border-radius:10px;padding:10px 14px;font:700 14px Nunito;color:var(--ink)}
+.category-filter{display:grid;grid-template-columns:repeat(8,1fr);gap:20px;padding:18px;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:0 5px 18px #26126a10}.category-filter button{min-height:115px;border:0;border-radius:11px;background:linear-gradient(135deg,#f4f2ff,#eef4ff);color:var(--ink);font:700 14px Nunito;cursor:pointer}.category-filter button:nth-child(2){background:#edf6ff}.category-filter button:nth-child(3){background:#f3f0ff}.category-filter button:nth-child(4){background:#eafbf8}.category-filter button:nth-child(5){background:#fff3dc}.category-filter button:nth-child(6){background:#fff0f7}.category-filter button:nth-child(7){background:#eff6ff}.category-filter button:nth-child(8){background:#effbea}.category-filter button span{display:block;font-size:38px;margin-bottom:10px}.category-filter button.selected{outline:2px solid #8c55ff;background:#f7f2ff;color:#5620d8}
+.course-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:24px}.course-card{background:#fff;border:1px solid var(--line);border-radius:17px;overflow:hidden;box-shadow:0 8px 22px #25156d12;transition:.25s}.course-card:hover{transform:translateY(-5px);box-shadow:0 15px 30px #25156d20}.course-card[hidden]{display:none}.course-art{height:185px;position:relative;display:grid;place-items:center;overflow:hidden}.course-art:before,.course-art:after{content:'✦';position:absolute;color:#fff7;font-size:24px}.course-art:before{left:28px;top:45px}.course-art:after{right:35px;bottom:26px}.art-green{background:linear-gradient(135deg,#0cc8a8,#0887b8)}.art-purple{background:linear-gradient(135deg,#5530d4,#254da7)}.art-blue{background:linear-gradient(135deg,#34c1dc,#2b79e2)}.art-pink{background:linear-gradient(135deg,#913ad5,#e268b8)}.art-teal{background:linear-gradient(135deg,#0fae9a,#2b79a8)}.art-violet{background:linear-gradient(135deg,#5d2bd6,#9d55e8)}.art-orange{background:linear-gradient(135deg,#f28a27,#c34c76)}.art-indigo{background:linear-gradient(135deg,#30229a,#6e27bd)}.art-emoji{font-size:78px;filter:drop-shadow(0 10px 12px #0004);position:relative}.art-emoji small{display:grid;place-items:center;position:absolute;right:-15px;bottom:0;width:44px;height:44px;border-radius:50%;background:#fff;color:#5a23de;font:800 13px Nunito}.badge{position:absolute;top:12px;left:12px;padding:5px 11px;border-radius:15px;color:#fff;font-size:13px;z-index:2}.beginner{background:#3fc76a}.popular{background:#ff862c}.new{background:#72ce25}.heart{position:absolute;right:12px;top:8px;border:0;background:transparent;color:#fff;font-size:34px;cursor:pointer;z-index:2}.heart.saved{color:#ff4f86}.demo-play{position:absolute;bottom:10px;right:10px;border:0;border-radius:18px;background:#ffffffea;color:#5420d8;padding:7px 12px;font-weight:800;cursor:pointer}.course-content{padding:14px 15px 12px}.course-content h2{font:800 20px 'Baloo 2',sans-serif;margin:0}.course-content p{min-height:48px;margin:3px 0 10px;color:#3f455d;font-size:14px;line-height:1.4}.course-meta{display:flex;justify-content:space-between;gap:5px;border-top:1px solid var(--line);padding-top:10px;color:#34384c;font-size:12px}.progress{height:6px;background:#ececf5;border-radius:8px;margin:15px 0 5px;overflow:hidden}.progress i{display:block;height:100%;background:linear-gradient(90deg,#20be55,#56d42c);border-radius:8px}.progress.orange i{background:#ff8619}.course-footer{display:flex;align-items:center;justify-content:space-between;color:#13b452;font-size:14px}.orange-text{color:#ff7d00}.course-footer button{border:0;background:linear-gradient(135deg,#6926ee,#4b16d4);color:#fff;padding:9px 17px;border-radius:10px;font-weight:800;cursor:pointer}.empty-state{text-align:center;font-size:20px;color:var(--muted);padding:50px}
+.demo-modal[hidden]{display:none}.demo-modal{position:fixed;inset:0;background:#09051fc4;z-index:100;display:grid;place-items:center;padding:20px}.demo-dialog{width:min(560px,100%);background:#fff;border-radius:24px;padding:24px;position:relative;text-align:center}.demo-close{position:absolute;right:14px;top:10px;border:0;background:transparent;font-size:32px;cursor:pointer}.video-placeholder{height:280px;border-radius:17px;background:linear-gradient(135deg,#14096f,#7028ee);color:#fff;display:grid;place-content:center}.video-placeholder span{font-size:58px}.video-placeholder p{font-weight:800}.demo-dialog h2{font:800 30px 'Baloo 2',sans-serif;margin:17px 0 4px}.demo-dialog>p{color:var(--muted);line-height:1.5}.demo-primary{border:0;border-radius:10px;background:var(--purple);color:#fff;padding:12px 26px;font-weight:800;cursor:pointer}.course-toast{position:fixed;right:24px;bottom:24px;background:#161049;color:#fff;padding:13px 18px;border-radius:12px;opacity:0;transform:translateY(15px);pointer-events:none;transition:.25s;z-index:120}.course-toast.show{opacity:1;transform:none}
+@media(max-width:1180px){.course-header nav{gap:20px}.start-button{display:none}.category-filter{grid-template-columns:repeat(4,1fr)}.course-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:820px){.course-header{height:76px}.course-menu{display:block;margin-left:auto;border:0;background:#fff;font-size:28px}.course-header nav{display:none;position:absolute;top:76px;left:0;right:0;background:#fff;padding:15px 6%;flex-direction:column;align-items:flex-start;box-shadow:0 12px 20px #0002}.course-header nav.open{display:flex}.course-header nav a{padding:8px 0}.course-header nav a.active:after{bottom:0}.course-actions .search-button{display:none}.courses-hero{height:auto;min-height:240px;grid-template-columns:1fr;padding:35px 20px}.hero-character{display:none}.hero-title h1{font-size:46px}.catalog-shell{width:94%}.age-filter{border-radius:20px;flex-wrap:wrap}.age-filter>span{width:100%}.age-filter select{margin-left:0}.category-filter{grid-template-columns:repeat(2,1fr)}.course-grid{grid-template-columns:1fr}.course-art{height:215px}}
+@media(max-width:480px){.course-brand{font-size:25px}.course-brand>span{font-size:30px}.course-actions .login-button{display:none}.hero-title p br{display:none}.age-filter button{padding:10px 15px}.category-filter{gap:10px;padding:10px}.category-filter button{min-height:95px}.course-meta{font-size:11px}}
+
+.course-open-button{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;background:#5b20e8;color:#fff;border-radius:9px;padding:9px 16px;font-weight:800;white-space:nowrap} 
+.footer{
+    background:#1b1464;
+    color:white;
+    margin-top:80px;
+    padding:50px 8% 20px;
+    position:relative;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:40px;
+}
+
+.footer-logo h2{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.footer-logo p{
+    color:#ddd;
+}
+
+.footer-links,
+.footer-contact{
+    display:flex;
+    flex-direction:column;
+}
+
+.footer-links h3,
+.footer-contact h3{
+    margin-bottom:15px;
+}
+
+.footer-links a,
+.footer-contact a{
+    color:white;
+    text-decoration:none;
+    margin:6px 0;
+    transition:.3s;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover{
+    color:#FFD93D;
+    transform:translateX(6px);
+}
+
+.footer hr{
+    margin:30px 0 15px;
+    border:none;
+    height:1px;
+    background:rgba(255,255,255,.2);
+}
+
+.copyright{
+    text-align:center;
+    color:#ddd;
+}
+
+#backToTop{
+    position:absolute;
+    right:30px;
+    bottom:25px;
+    width:50px;
+    height:50px;
+    border:none;
+    border-radius:50%;
+    background:#FFD93D;
+    color:#222;
+    font-size:20px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#backToTop:hover{
+    transform:translateY(-5px);
+}
