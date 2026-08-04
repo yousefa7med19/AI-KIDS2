@@ -4,20 +4,251 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI Kids — Parent Dashboard</title>
+
+  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/dashboard.css">
 </head>
+
 <body>
-  <h1>Parent Dashboard</h1>
-  <p id="welcome"></p>
+  <div class="dashboard-layout">
 
-  <script>
-    const user = JSON.parse(localStorage.getItem('user'));
+    <aside class="sidebar">
+      <a class="brand" href="../index.html">
+        <span>AI</span> Kids
+      </a>
 
-    if (!user) {
-      window.location.href = 'login.html';
-    } else {
-      document.getElementById('welcome').textContent =
-        `Welcome, ${user.fullName}`;
-    }
-  </script>
+      <nav class="sidebar-nav">
+  <a class="nav-link active" href="parent-dashboard.html">
+    <span class="nav-icon">🏠</span>
+    <span>Dashboard</span>
+  </a>
+
+  <a class="nav-link" href="#children-section">
+    <span class="nav-icon">👧</span>
+    <span>My Children</span>
+  </a>
+
+  <a class="nav-link" href="courses.html">
+    <span class="nav-icon">📚</span>
+    <span>Courses</span>
+  </a>
+
+  <a class="nav-link" href="games.html">
+    <span class="nav-icon">🎮</span>
+    <span>Games</span>
+  </a>
+
+  <a class="nav-link" href="habit-builder.html">
+    <span class="nav-icon">📅</span>
+    <span>Habit Builder</span>
+  </a>
+
+  
+
+  
+
+  
+
+  
+
+  <a class="nav-link" href="../index.html">
+    <span class="nav-icon">🏡</span>
+    <span>Back to Home</span>
+  </a>
+</nav>
+    </aside>
+
+    <main class="dashboard-main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Parent Dashboard</p>
+          <h1>Welcome back, <span id="welcome-name">Parent</span>!</h1>
+        </div>
+
+        <div class="topbar-actions">
+          <div class="parent-profile">
+            <div class="avatar">P</div>
+            <span id="parent-name">Parent</span>
+          </div>
+
+          <button id="logout-button" class="logout-button" type="button">
+            Log Out
+          </button>
+        </div>
+      </header>
+
+      <section class="stats-grid">
+        <article class="stat-card">
+          <span class="stat-icon">👧</span>
+          <div>
+            <p>Children</p>
+            <strong id="children-count">0</strong>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <span class="stat-icon">⭐</span>
+          <div>
+            <p>Total XP</p>
+            <strong id="total-xp">0</strong>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <span class="stat-icon">📚</span>
+          <div>
+            <p>Courses Completed</p>
+            <strong id="courses-completed">0</strong>
+          </div>
+        </article>
+
+        <article class="stat-card">
+          <span class="stat-icon">🔥</span>
+          <div>
+            <p>Best Streak</p>
+            <strong id="best-streak">0 days</strong>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel children-panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Family Learning</p>
+              <h2>My Children</h2>
+            </div>
+
+            <button class="primary-button" id="add-child-button" type="button">
+              + Add Child
+            </button>
+          </div>
+
+          <div class="empty-state" id="children-empty-state">
+            <div class="empty-icon">🤖</div>
+            <h3>No children added yet</h3>
+            <p>Add your first child to start tracking courses, games, habits and achievements.</p>
+          </div>
+
+          <div class="children-list" id="children-list"></div>
+        </article>
+
+        <article class="panel activity-panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Latest Updates</p>
+              <h2>Recent Activity</h2>
+            </div>
+          </div>
+
+          <div class="activity-item">
+            <span class="activity-dot"></span>
+            <div>
+              <strong>Your account is ready</strong>
+              <p>Add a child to begin the AI Kids learning journey.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+    </main>
+
+  </div>
+<div class="modal-overlay" id="child-modal" hidden>
+  <div
+    class="modal-card"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="child-modal-title"
+  >
+    <button
+      class="modal-close"
+      id="close-child-modal"
+      type="button"
+      aria-label="Close"
+    >
+      ×
+    </button>
+
+    <p class="eyebrow">Learner Profile</p>
+
+    <h2 id="child-modal-title">
+      Add Child
+    </h2>
+
+    <form id="add-child-form">
+      <label for="child-name">
+        Child Name
+      </label>
+
+      <input
+        id="child-name"
+        name="name"
+        type="text"
+        required
+        maxlength="50"
+        placeholder="Enter child name"
+      >
+
+      <label for="child-age">
+        Child Age
+      </label>
+
+      <select
+        id="child-age"
+        name="age"
+        required
+      >
+        <option value="">Choose age</option>
+        <option value="7">7 years</option>
+        <option value="8">8 years</option>
+        <option value="9">9 years</option>
+        <option value="10">10 years</option>
+      </select>
+
+      <label for="child-avatar">
+        Avatar
+      </label>
+
+      <select
+        id="child-avatar"
+        name="avatar"
+      >
+        <option value="avatar-1">
+          Robot Explorer
+        </option>
+
+        <option value="avatar-2">
+          Space Learner
+        </option>
+
+        <option value="avatar-3">
+          Creative Coder
+        </option>
+      </select>
+
+      <button
+        class="primary-button modal-submit"
+        id="child-submit-button"
+        type="submit"
+      >
+        Add Child
+      </button>
+
+      <p
+        class="modal-status"
+        id="child-form-status"
+        role="status"
+      ></p>
+    </form>
+  </div>
+</div>
+</div>
+<script src="../js/auth-guard.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/dashboard.js"></script>
 </body>
 </html>

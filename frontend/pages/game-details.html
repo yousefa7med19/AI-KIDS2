@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>AI Kids — Game Details</title>
+
+  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="../css/game-details.css">
+</head>
+
+<body>
+  <header class="page-header">
+    <a class="brand" href="../index.html">
+      <span>AI</span> Kids
+    </a>
+
+    <a id="back-to-games" class="back-button" href="games.html">
+      ← Back to Games
+    </a>
+  </header>
+
+  <main class="game-main">
+    <section class="game-hero">
+      <div class="game-icon" id="game-icon">🎮</div>
+
+      <div class="game-info">
+        <p class="eyebrow">Game Mission</p>
+
+        <h1 id="game-title">Loading game...</h1>
+
+        <p id="game-description" class="game-description"></p>
+
+        <div class="game-meta">
+          <span id="game-category">AI Basics</span>
+          <span id="game-difficulty">Easy</span>
+          <span id="game-rating">⭐ 0</span>
+          <span id="game-age">Ages 7–10</span>
+        </div>
+
+        <div class="reward-row">
+          <span id="game-xp">⭐ 0 XP</span>
+          <span id="game-coins">🪙 0 Coins</span>
+        </div>
+
+        <button
+          id="start-game-button"
+          class="primary-button"
+          type="button"
+        >
+          Start Game
+        </button>
+
+        <p id="game-status" class="game-status" role="status"></p>
+      </div>
+    </section>
+
+    <section class="game-content-grid">
+      <article class="content-card">
+        <div class="card-icon">🎯</div>
+
+        <div>
+          <p class="eyebrow">Game Goal</p>
+          <h2>What You Will Practice</h2>
+
+          <p id="game-goal">
+            Practice AI skills through a fun and interactive activity.
+          </p>
+        </div>
+      </article>
+
+      <article class="content-card">
+        <div class="card-icon">🏆</div>
+
+        <div>
+          <p class="eyebrow">Rewards</p>
+          <h2>Play and Earn</h2>
+
+          <p>
+            Complete the game to earn XP and coins for your learner profile.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section class="game-panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Coming Soon</p>
+          <h2>Game Information</h2>
+        </div>
+      </div>
+
+      <div id="game-placeholder" class="game-placeholder">
+        <div class="placeholder-icon">🎮</div>
+
+        <div>
+          <strong>This game is not available yet</strong>
+
+          <p>
+            The game engine, scoring and final activity will be uploaded later.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/auth-guard.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/game-details.js"></script>
+</body>
+</html>

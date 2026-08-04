@@ -39,32 +39,73 @@
         <p class="muted">Choose your preferred payment method. Your information is protected.</p>
 
         <div class="payment-tabs" role="tablist">
-          <button class="payment-tab active" data-method="card" type="button">💳 Card</button>
-          <button class="payment-tab" data-method="wallet" type="button">📱 Mobile Wallet</button>
-          <button class="payment-tab" data-method="fawry" type="button">🏪 Fawry</button>
-        </div>
+  <button
+    class="payment-tab active"
+    data-method="fawry"
+    type="button"
+  >
+    🏪 Fawry
+  </button>
+
+  <button
+    class="payment-tab"
+    data-method="bank-transfer"
+    type="button"
+  >
+    🏦 Bank Transfer
+  </button>
+</div>
 
         <form id="paymentForm" novalidate>
-          <div class="payment-panel active" data-panel="card">
-            <label>Cardholder name<input name="cardName" autocomplete="cc-name" placeholder="Name on card" required></label>
-            <label>Card number<div class="input-icon"><input name="cardNumber" inputmode="numeric" autocomplete="cc-number" maxlength="19" placeholder="1234 5678 9012 3456" required><span>💳</span></div></label>
-            <div class="two-cols">
-              <label>Expiry date<input name="expiry" inputmode="numeric" autocomplete="cc-exp" maxlength="5" placeholder="MM/YY" required></label>
-              <label>CVV<div class="input-icon"><input name="cvv" inputmode="numeric" autocomplete="cc-csc" maxlength="4" placeholder="123" required><span title="3 or 4 digit security code">?</span></div></label>
-            </div>
-          </div>
+          <div class="payment-panel active" data-panel="fawry">
+  <div class="notice">
+    After confirming your order, a Fawry payment reference will be generated.
+  </div>
+</div>
 
-          <div class="payment-panel" data-panel="wallet">
-            <label>Mobile wallet number<input name="walletNumber" inputmode="tel" placeholder="01XXXXXXXXX"></label>
-            <div class="notice">You will receive a confirmation request on your mobile wallet.</div>
-          </div>
+<div class="payment-panel" data-panel="bank-transfer">
 
-          <div class="payment-panel" data-panel="fawry">
-            <label>Mobile number<input name="fawryNumber" inputmode="tel" placeholder="01XXXXXXXXX"></label>
-            <div class="notice">A Fawry reference code will be generated after confirmation.</div>
-          </div>
+  <div class="notice">
+    Transfer the subscription amount to the National Bank of Egypt account below,
+    then enter the transfer reference.
+  </div>
 
-          <label class="check-row"><input type="checkbox" id="agree" required><span>I agree to the Terms of Service and recurring billing policy.</span></label>
+  <div class="bank-details">
+
+    <p><strong>Bank:</strong> National Bank of Egypt</p>
+
+    <p><strong>Account Name:</strong> AI Kids</p>
+
+    <p><strong>Account Number:</strong> **************</p>
+
+    <p><strong>IBAN:</strong> EG**********************</p>
+
+  </div>
+
+  <label>
+    Transfer Reference
+
+    <input
+      type="text"
+      name="bankTransferReference"
+      placeholder="Enter transfer reference"
+    >
+  </label>
+
+  <label>
+    Notes
+
+    <textarea
+      name="transferNotes"
+      rows="3"
+      placeholder="Optional notes"
+    ></textarea>
+
+  </label>
+
+</div>
+
+          <label class="check-row"><input type="checkbox" id="agree" required><span>I agree to the Terms of Service and subscription policy..</span></label>
           <button class="pay-btn" type="submit"><span>Pay securely</span><strong id="payAmount">EGP 299</strong></button>
           <p id="formMessage" class="form-message" aria-live="polite"></p>
         </form>

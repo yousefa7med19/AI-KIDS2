@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>AI Kids — Course Details</title>
+
+  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="../css/course-details.css">
+</head>
+
+<body>
+  <header class="page-header">
+    <a class="brand" href="../index.html">
+      <span>AI</span> Kids
+    </a>
+
+    <a id="back-to-child" class="back-button" href="parent-dashboard.html">
+      ← Back
+    </a>
+  </header>
+
+  <main class="course-main">
+    <section class="course-hero">
+      <div class="course-icon" id="course-icon">📚</div>
+
+      <div class="course-info">
+        <p class="eyebrow">Your Next Adventure</p>
+
+        <h1 id="course-title">Loading course...</h1>
+
+        <p id="course-description" class="course-description"></p>
+
+        <div class="course-meta">
+          <span id="course-difficulty">Beginner</span>
+          <span id="course-lessons">0 lessons</span>
+          <span id="course-xp">0 XP</span>
+        </div>
+
+        <button id="start-course-button" class="primary-button" type="button">
+          Start Course
+        </button>
+
+        <p id="course-status" class="course-status" role="status"></p>
+      </div>
+    </section>
+
+    <section class="course-content-grid">
+      <article class="content-card">
+        <div class="card-icon">🎯</div>
+
+        <div>
+          <p class="eyebrow">Learning Goal</p>
+          <h2>What You Will Learn</h2>
+
+          <p id="learning-goal">
+            Explore the course through fun, age-appropriate lessons and activities.
+          </p>
+        </div>
+      </article>
+
+      <article class="content-card">
+        <div class="card-icon">🏆</div>
+
+        <div>
+          <p class="eyebrow">Reward</p>
+          <h2>Complete and Earn</h2>
+
+          <p>
+            Finish the course to collect XP, unlock achievements and grow your learning streak.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section class="lessons-panel">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Course Journey</p>
+          <h2>Lessons</h2>
+        </div>
+      </div>
+
+      <div id="lessons-list" class="lessons-list">
+        <p class="loading-message">Lessons will appear here soon.</p>
+      </div>
+    </section>
+  </main>
+<script src="../js/auth-guard.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/course-details.js"></script>
+</body>
+</html>

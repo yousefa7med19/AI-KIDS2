@@ -26,6 +26,19 @@ input,select{width:100%;padding:14px;border:1px solid #ced2e8;border-radius:10px
 .submit{width:100%;border:0;border-radius:10px;padding:15px;margin-top:24px;background:linear-gradient(135deg,var(--purple2),var(--purple));color:#fff;font:800 17px Nunito,sans-serif;cursor:pointer}
 .helper{text-align:center;margin-top:18px}.helper a{color:var(--purple);font-weight:800}
 .status{min-height:22px;text-align:center;color:var(--purple);font-weight:800;margin-top:14px}
+.forgot-password-link{
+  margin-top:14px;
+  text-align:right;
+}
+
+.forgot-password-link a{
+  color:var(--purple);
+  font-weight:800;
+}
+
+.forgot-password-link a:hover{
+  text-decoration:underline;
+}
 @media(max-width:560px){.page-header{height:68px}.page-main{min-height:calc(100vh - 68px)}.auth-card{padding:26px 20px}.row{grid-template-columns:1fr}}
 </style>
 </head>
@@ -43,6 +56,11 @@ input,select{width:100%;padding:14px;border:1px solid #ced2e8;border-radius:10px
   <label for="password">Password</label>
   <input id="password" name="password" type="password" autocomplete="current-password" required placeholder="Enter your password">
   <button class="submit" type="submit">Log In</button>
+  <div class="forgot-password-link">
+  <a href="forgot-password.html">
+    Forgot your password?
+  </a>
+</div>
   <div class="status" id="status" role="status"></div>
   <p class="helper">New to AI Kids? <a href="signup.html">Create an account</a></p>
 </form>
@@ -90,7 +108,20 @@ loginForm.addEventListener('submit', async (event) => {
         statusElement.textContent = "Login successful!";
 
         setTimeout(() => {
-            window.location.href = "parent-dashboard.html";
+            const loggedInUser = data.user;
+
+localStorage.setItem(
+  'user',
+  JSON.stringify(loggedInUser)
+);
+
+localStorage.setItem('token', data.token);
+
+if (loggedInUser.role === 'admin') {
+  window.location.href = 'admin-dashboard.html';
+} else {
+  window.location.href = 'parent-dashboard.html';
+}
         }, 1000);
 
     } catch (error) {

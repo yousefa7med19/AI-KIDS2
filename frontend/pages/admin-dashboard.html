@@ -1,0 +1,462 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>AI Kids — Admin Dashboard</title>
+
+  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link
+    rel="stylesheet"
+    href="../assets/css/admin-dashboard.css"
+  >
+</head>
+
+<body>
+  <div class="admin-layout">
+
+    <aside class="sidebar" id="sidebar">
+
+      <div class="sidebar-brand">
+        <div class="brand-icon">🤖</div>
+
+        <div>
+          <h1><span>AI</span> Kids</h1>
+          <p>Admin Panel</p>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+
+        <a
+          class="nav-link active"
+          href="#dashboard"
+          data-section="dashboard"
+        >
+          <span>📊</span>
+          Dashboard
+        </a>
+
+        <a
+          class="nav-link"
+          href="#users"
+          data-section="users"
+        >
+          <span>👨‍👩‍👧</span>
+          Users
+        </a>
+
+        <a
+          class="nav-link"
+          href="#children"
+          data-section="children"
+        >
+          <span>👶</span>
+          Children
+        </a>
+
+        <a
+          class="nav-link"
+          href="#payments"
+          data-section="payments"
+        >
+          <span>💳</span>
+          Payments
+        </a>
+
+        <a
+          class="nav-link"
+          href="#subscriptions"
+          data-section="subscriptions"
+        >
+          <span>📦</span>
+          Subscriptions
+        </a>
+
+        <a
+          class="nav-link"
+          href="#courses"
+          data-section="courses"
+        >
+          <span>📚</span>
+          Courses
+        </a>
+
+        <a
+          class="nav-link"
+          href="#games"
+          data-section="games"
+        >
+          <span>🎮</span>
+          Games
+        </a>
+
+      </nav>
+
+      <div class="sidebar-footer">
+
+        <a href="../index.html" class="website-link">
+          🌐 View Website
+        </a>
+
+        <button id="logout-button" type="button">
+          🚪 Logout
+        </button>
+
+      </div>
+
+    </aside>
+
+    <div class="admin-content">
+
+      <header class="admin-header">
+
+        <button
+          class="menu-button"
+          id="menu-button"
+          type="button"
+          aria-label="Open menu"
+        >
+          ☰
+        </button>
+
+        <div class="header-title">
+          <p class="eyebrow">AI Kids Management</p>
+          <h2>Welcome back, <span id="admin-name">Admin</span> 👋</h2>
+        </div>
+
+        <div class="admin-profile">
+          <div class="profile-avatar">👑</div>
+
+          <div>
+            <strong id="admin-profile-name">Admin</strong>
+            <small>Administrator</small>
+          </div>
+        </div>
+
+      </header>
+
+      <main class="dashboard-main">
+
+        <section
+          class="dashboard-section active"
+          id="dashboard-section"
+          data-page-section="dashboard"
+        >
+
+          <div class="welcome-card">
+
+            <div>
+              <p class="eyebrow">Platform Overview</p>
+
+              <h2>Manage AI Kids from one place</h2>
+
+              <p>
+                Review users, payments, subscriptions,
+                courses and games from your secure admin dashboard.
+              </p>
+            </div>
+
+            <div class="welcome-robot">🤖📊</div>
+
+          </div>
+
+          <section class="stats-grid">
+
+            <article class="stat-card stat-purple">
+              <div class="stat-icon">👨‍👩‍👧</div>
+
+              <div>
+                <p>Total Users</p>
+                <strong id="total-users">0</strong>
+                <small>Registered parents</small>
+              </div>
+            </article>
+
+            <article class="stat-card stat-blue">
+              <div class="stat-icon">👶</div>
+
+              <div>
+                <p>Total Children</p>
+                <strong id="total-children">0</strong>
+                <small>Learner profiles</small>
+              </div>
+            </article>
+
+            <article class="stat-card stat-orange">
+              <div class="stat-icon">💳</div>
+
+              <div>
+                <p>Pending Payments</p>
+                <strong id="pending-payments">0</strong>
+                <small>Waiting for review</small>
+              </div>
+            </article>
+
+            <article class="stat-card stat-green">
+              <div class="stat-icon">📦</div>
+
+              <div>
+                <p>Active Subscriptions</p>
+                <strong id="active-subscriptions">0</strong>
+                <small>Current memberships</small>
+              </div>
+            </article>
+
+            <article class="stat-card stat-pink">
+              <div class="stat-icon">📚</div>
+
+              <div>
+                <p>Courses</p>
+                <strong id="total-courses">0</strong>
+                <small>Published and drafts</small>
+              </div>
+            </article>
+
+            <article class="stat-card stat-yellow">
+              <div class="stat-icon">🎮</div>
+
+              <div>
+                <p>Games</p>
+                <strong id="total-games">0</strong>
+                <small>Published and drafts</small>
+              </div>
+            </article>
+
+          </section>
+
+          <section class="dashboard-grid">
+
+            <article class="dashboard-card">
+
+              <div class="card-heading">
+                <div>
+                  <p class="eyebrow">Latest Activity</p>
+                  <h3>Recent Payments</h3>
+                </div>
+
+                <button
+                  class="view-all-button"
+                  type="button"
+                  data-open-section="payments"
+                >
+                  View All
+                </button>
+              </div>
+
+              <div
+                class="table-wrapper"
+                id="recent-payments-container"
+              >
+                <p class="empty-message">
+                  No payments found yet.
+                </p>
+              </div>
+
+            </article>
+
+            <article class="dashboard-card">
+
+              <div class="card-heading">
+                <div>
+                  <p class="eyebrow">New Families</p>
+                  <h3>Recent Users</h3>
+                </div>
+
+                <button
+                  class="view-all-button"
+                  type="button"
+                  data-open-section="users"
+                >
+                  View All
+                </button>
+              </div>
+
+              <div
+                class="recent-users-list"
+                id="recent-users-container"
+              >
+                <p class="empty-message">
+                  No users found yet.
+                </p>
+              </div>
+
+            </article>
+
+          </section>
+
+        </section>
+
+        <section
+          class="dashboard-section"
+          id="users-section"
+          data-page-section="users"
+        >
+
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Account Management</p>
+              <h2>Users</h2>
+            </div>
+          </div>
+
+          <div class="dashboard-card">
+            <div id="users-table-container">
+              <p class="empty-message">
+                Users management will appear here.
+              </p>
+            </div>
+          </div>
+
+        </section>
+
+        <section
+          class="dashboard-section"
+          id="children-section"
+          data-page-section="children"
+        >
+
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Learner Profiles</p>
+              <h2>Children</h2>
+            </div>
+          </div>
+
+          <div class="dashboard-card">
+            <div id="children-table-container">
+              <p class="empty-message">
+                Children management will appear here.
+              </p>
+            </div>
+          </div>
+
+        </section>
+
+        <section
+          class="dashboard-section"
+          id="payments-section"
+          data-page-section="payments"
+        >
+
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Financial Management</p>
+              <h2>Payments</h2>
+            </div>
+          </div>
+
+          <div class="dashboard-card">
+            <div id="payments-table-container">
+              <p class="empty-message">
+                Payments will appear here.
+              </p>
+            </div>
+          </div>
+
+        </section>
+
+        <section
+          class="dashboard-section"
+          id="subscriptions-section"
+          data-page-section="subscriptions"
+        >
+
+          <div class="section-header">
+            <div>
+              <p class="eyebrow">Membership Management</p>
+              <h2>Subscriptions</h2>
+            </div>
+          </div>
+
+          <div class="dashboard-card">
+            <div id="subscriptions-table-container">
+              <p class="empty-message">
+                Subscriptions will appear here.
+              </p>
+            </div>
+          </div>
+
+        </section>
+
+        <section
+          class="dashboard-section"
+          id="courses-section"
+          data-page-section="courses"
+        >
+
+          <div class="section-header">
+
+            <div>
+              <p class="eyebrow">Learning Content</p>
+              <h2>Courses</h2>
+            </div>
+
+            <button class="primary-action" type="button">
+              + Add Course
+            </button>
+
+          </div>
+
+          <div class="dashboard-card">
+            <div id="courses-table-container">
+              <p class="empty-message">
+                Courses management will appear here.
+              </p>
+            </div>
+          </div>
+
+        </section>
+
+        <section
+          class="dashboard-section"
+          id="games-section"
+          data-page-section="games"
+        >
+
+          <div class="section-header">
+
+            <div>
+              <p class="eyebrow">Interactive Content</p>
+              <h2>Games</h2>
+            </div>
+
+            <button class="primary-action" type="button">
+              + Add Game
+            </button>
+
+          </div>
+
+          <div class="dashboard-card">
+            <div id="games-table-container">
+              <p class="empty-message">
+                Games management will appear here.
+              </p>
+            </div>
+          </div>
+
+        </section>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <script src="../js/auth-guard.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../assets/js/admin-dashboard.js"></script>
+</body>
+</html>

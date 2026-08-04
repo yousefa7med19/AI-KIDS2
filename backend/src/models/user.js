@@ -30,7 +30,23 @@ const userSchema = new mongoose.Schema(
     isVerified: {
       type: Boolean,
       default: false
-    }
+    },
+
+    role: {
+  type: String,
+  enum: ['parent', 'admin'],
+  default: 'parent'
+},
+
+    resetPasswordToken: {
+  type: String,
+  default: null
+},
+
+resetPasswordExpires: {
+  type: Date,
+  default: null
+}
   },
   {
     timestamps: true

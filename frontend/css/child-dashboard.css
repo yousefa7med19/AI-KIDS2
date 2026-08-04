@@ -1,0 +1,568 @@
+:root{
+  --navy:#10184b;
+  --purple:#5a24f4;
+  --purple-dark:#3c16c9;
+  --purple-light:#efe9ff;
+  --blue:#1688ff;
+  --yellow:#ffc928;
+  --orange:#ff9d00;
+  --green:#18b875;
+  --text-soft:#68708d;
+  --surface:#ffffff;
+  --background:#f7f5ff;
+  --line:#e8e8f7;
+  --shadow:0 18px 45px rgba(55,31,145,.12);
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  min-height:100vh;
+  font-family:Nunito,Arial,sans-serif;
+  color:var(--navy);
+  background:
+    radial-gradient(circle at 8% 10%,rgba(113,28,255,.12),transparent 24%),
+    radial-gradient(circle at 94% 88%,rgba(22,136,255,.10),transparent 22%),
+    var(--background);
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.child-dashboard{
+  min-height:100vh;
+}
+
+.child-header{
+  position:sticky;
+  top:0;
+  z-index:20;
+  min-height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding:0 5%;
+  background:#fff;
+  box-shadow:0 8px 25px rgba(31,18,105,.1);
+}
+
+.brand{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font:800 31px "Baloo 2",sans-serif;
+  color:var(--orange);
+}
+
+.brand span{
+  color:var(--purple);
+}
+
+.back-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  padding:10px 16px;
+  border-radius:12px;
+  color:var(--purple);
+  background:var(--purple-light);
+  font-weight:800;
+  transition:.2s ease;
+}
+
+.back-button:hover{
+  transform:translateY(-2px);
+  background:#e3d8ff;
+}
+
+.child-main{
+  width:min(1220px,calc(100% - 40px));
+  margin:0 auto;
+  padding:34px 0 50px;
+}
+
+.child-hero{
+  position:relative;
+  overflow:hidden;
+  margin-bottom:24px;
+  padding:34px;
+  border-radius:28px;
+  color:#fff;
+  background:
+    radial-gradient(circle at 85% 20%,rgba(255,255,255,.18),transparent 22%),
+    linear-gradient(135deg,#3414b9,#7428ff);
+  box-shadow:0 24px 55px rgba(68,30,190,.25);
+}
+
+.child-hero::after{
+  content:"";
+  position:absolute;
+  right:-65px;
+  bottom:-85px;
+  width:230px;
+  height:230px;
+  border-radius:50%;
+  background:rgba(255,255,255,.08);
+}
+
+.child-profile{
+  position:relative;
+  z-index:1;
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+
+.child-avatar-large{
+  width:108px;
+  height:108px;
+  display:grid;
+  place-items:center;
+  flex:0 0 auto;
+  border:5px solid rgba(255,255,255,.28);
+  border-radius:30px;
+  background:linear-gradient(135deg,#fff4bd,#ffd04c);
+  box-shadow:0 14px 28px rgba(18,8,90,.22);
+  font-size:58px;
+}
+
+.eyebrow{
+  margin:0 0 5px;
+  color:var(--purple);
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.child-hero .eyebrow{
+  color:rgba(255,255,255,.78);
+}
+
+.child-hero h1{
+  margin:0;
+  font:800 clamp(36px,5vw,58px) "Baloo 2",sans-serif;
+  line-height:1;
+}
+
+.child-hero h1 span{
+  color:var(--yellow);
+}
+
+.child-meta{
+  margin:8px 0 0;
+  color:rgba(255,255,255,.86);
+  font-size:17px;
+  font-weight:800;
+}
+
+.child-stats{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:18px;
+  margin-bottom:24px;
+}
+
+.child-stat-card{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  min-height:126px;
+  padding:22px;
+  border:1px solid rgba(87,44,220,.08);
+  border-radius:22px;
+  background:var(--surface);
+  box-shadow:var(--shadow);
+  transition:.2s ease;
+}
+
+.child-stat-card:hover{
+  transform:translateY(-4px);
+}
+
+.stat-emoji{
+  width:56px;
+  height:56px;
+  display:grid;
+  place-items:center;
+  flex:0 0 auto;
+  border-radius:18px;
+  background:linear-gradient(135deg,#f4efff,#e5dcff);
+  font-size:27px;
+}
+
+.child-stat-card p{
+  margin:0 0 6px;
+  color:var(--text-soft);
+  font-size:14px;
+  font-weight:800;
+}
+
+.child-stat-card strong{
+  font:800 30px "Baloo 2",sans-serif;
+}
+
+.learning-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:22px;
+  margin-bottom:24px;
+}
+
+.learning-card{
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:flex-start;
+  gap:20px;
+  min-height:255px;
+  padding:26px;
+  border:1px solid rgba(87,44,220,.08);
+  border-radius:26px;
+  background:#fff;
+  box-shadow:var(--shadow);
+  transition:.22s ease;
+}
+
+.learning-card:hover{
+  transform:translateY(-5px);
+}
+
+.learning-card::after{
+  content:"";
+  position:absolute;
+  right:-45px;
+  bottom:-60px;
+  width:150px;
+  height:150px;
+  border-radius:50%;
+  opacity:.45;
+}
+
+.courses-card::after{
+  background:#d9edff;
+}
+
+.games-card::after{
+  background:#eadcff;
+}
+
+.habits-card::after{
+  background:#d9f7e9;
+}
+
+.badges-card::after{
+  background:#fff1b8;
+}
+
+.learning-icon{
+  position:relative;
+  z-index:1;
+  width:72px;
+  height:72px;
+  display:grid;
+  place-items:center;
+  flex:0 0 auto;
+  border-radius:22px;
+  background:linear-gradient(135deg,#f4efff,#e5dcff);
+  font-size:36px;
+}
+
+.learning-card > div:last-child{
+  position:relative;
+  z-index:1;
+}
+
+.learning-card h2{
+  margin:0 0 8px;
+  font:800 30px "Baloo 2",sans-serif;
+}
+
+.learning-card p:not(.eyebrow){
+  margin:0 0 20px;
+  color:var(--text-soft);
+  line-height:1.7;
+}
+
+.learning-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:44px;
+  padding:11px 16px;
+  border-radius:12px;
+  color:#fff;
+  background:linear-gradient(135deg,var(--purple),var(--purple-dark));
+  font-weight:800;
+  transition:.2s ease;
+}
+
+.learning-button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 20px rgba(75,22,239,.22);
+}
+
+.progress-panel{
+  padding:26px;
+  border:1px solid rgba(87,44,220,.08);
+  border-radius:26px;
+  background:#fff;
+  box-shadow:var(--shadow);
+}
+
+.progress-panel h2{
+  margin:0;
+  font:800 30px "Baloo 2",sans-serif;
+}
+
+.progress-empty{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  margin-top:20px;
+  padding:22px;
+  border:2px dashed #dcd4fb;
+  border-radius:20px;
+  background:linear-gradient(135deg,#f8f5ff,#fff);
+}
+
+.progress-empty > span{
+  width:64px;
+  height:64px;
+  display:grid;
+  place-items:center;
+  flex:0 0 auto;
+  border-radius:20px;
+  background:#e9e0ff;
+  font-size:32px;
+}
+
+.progress-empty strong{
+  display:block;
+  margin-bottom:5px;
+}
+
+.progress-empty p{
+  margin:0;
+  color:var(--text-soft);
+}
+
+@media(max-width:1000px){
+  .child-stats{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media(max-width:760px){
+  .child-header{
+    min-height:70px;
+    padding:12px 18px;
+  }
+
+  .child-main{
+    width:min(100% - 28px,1220px);
+    padding-top:22px;
+  }
+
+  .child-profile{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .child-avatar-large{
+    width:92px;
+    height:92px;
+    font-size:48px;
+  }
+
+  .learning-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:560px){
+  .child-header{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+
+  .back-button{
+    width:100%;
+  }
+
+  .child-hero{
+    padding:25px 20px;
+    border-radius:22px;
+  }
+
+  .child-stats{
+    grid-template-columns:1fr;
+  }
+
+  .learning-card{
+    align-items:flex-start;
+    flex-direction:column;
+    padding:22px;
+    border-radius:21px;
+  }
+
+  .progress-empty{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+}
+.courses-section{
+  grid-column:1 / -1;
+}
+
+.courses-content{
+  width:100%;
+}
+
+.courses-list{
+  display:grid;
+  gap:16px;
+  margin-top:18px;
+}
+
+.course-item{
+  display:flex;
+  gap:16px;
+  padding:18px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:linear-gradient(135deg,#faf8ff,#fff);
+}
+
+.course-item-icon{
+  width:58px;
+  height:58px;
+  display:grid;
+  place-items:center;
+  flex:0 0 auto;
+  border-radius:18px;
+  background:linear-gradient(135deg,#fff2bd,#ffd458);
+  font-size:30px;
+}
+
+.course-item-content{
+  width:100%;
+}
+
+.course-item-top{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:14px;
+}
+
+.course-item h3{
+  margin:0 0 5px;
+  font:800 22px "Baloo 2",sans-serif;
+}
+
+.course-item p{
+  margin:0;
+  color:var(--text-soft);
+  line-height:1.6;
+}
+
+.course-difficulty{
+  flex:0 0 auto;
+  padding:6px 10px;
+  border-radius:999px;
+  color:var(--purple);
+  background:var(--purple-light);
+  font-size:12px;
+  font-weight:800;
+  text-transform:capitalize;
+}
+
+.course-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+  margin:14px 0;
+  color:var(--text-soft);
+  font-size:14px;
+  font-weight:800;
+}
+
+.course-start-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 15px;
+  border-radius:11px;
+  color:#fff;
+  background:linear-gradient(135deg,var(--purple),var(--purple-dark));
+  font-weight:800;
+  transition:.2s ease;
+}
+
+.course-start-button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 20px rgba(75,22,239,.22);
+}
+
+.courses-loading,
+.courses-error{
+  margin:0;
+  padding:18px;
+  border-radius:15px;
+  text-align:center;
+  background:var(--purple-light);
+  font-weight:800;
+}
+
+.courses-error{
+  color:#d6334c;
+  background:#fff0f2;
+}
+
+.courses-empty{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:18px;
+  border:2px dashed #dcd4fb;
+  border-radius:18px;
+}
+
+.courses-empty > span{
+  font-size:34px;
+}
+
+.courses-empty strong{
+  display:block;
+  margin-bottom:4px;
+}
+
+.courses-empty p{
+  margin:0;
+}
+
+@media(max-width:560px){
+  .course-item{
+    flex-direction:column;
+  }
+
+  .course-item-top{
+    flex-direction:column;
+  }
+
+  .course-start-button{
+    width:100%;
+  }
+}

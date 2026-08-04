@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>AI Kids — Child Dashboard</title>
+
+  <link rel="icon" type="image/png" href="../assets/images/logo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="../css/child-dashboard.css">
+</head>
+
+<body>
+  <div class="child-dashboard">
+
+    <header class="child-header">
+      <a class="brand" href="../index.html">
+        <span>AI</span> Kids
+      </a>
+
+      <a class="back-button" href="parent-dashboard.html">
+        ← Parent Dashboard
+      </a>
+    </header>
+
+    <main class="child-main">
+
+      <section class="child-hero">
+        <div class="child-profile">
+          <div class="child-avatar-large" id="child-avatar">🤖</div>
+
+          <div>
+            <p class="eyebrow">My Learning Space</p>
+
+            <h1>
+              Hi, <span id="child-name">Learner</span>!
+            </h1>
+
+            <p class="child-meta">
+              Age <span id="child-age">-</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="child-stats">
+
+        <article class="child-stat-card">
+          <span class="stat-emoji">⭐</span>
+
+          <div>
+            <p>Total XP</p>
+            <strong id="child-xp">0</strong>
+          </div>
+        </article>
+
+        <article class="child-stat-card">
+          <span class="stat-emoji">🔥</span>
+
+          <div>
+            <p>Current Streak</p>
+            <strong id="child-streak">0 days</strong>
+          </div>
+        </article>
+
+        <article class="child-stat-card">
+          <span class="stat-emoji">🪙</span>
+
+          <div>
+            <p>Coins</p>
+            <strong id="child-coins">0</strong>
+          </div>
+        </article>
+
+        <article class="child-stat-card">
+  <span class="stat-emoji">📈</span>
+
+  <div>
+    <p>Level</p>
+    <strong id="child-level">1</strong>
+  </div>
+</article>
+
+      </section>
+
+      <section class="learning-grid">
+
+        <article class="learning-card courses-card courses-section">
+  <div class="learning-icon">📚</div>
+
+  <div class="courses-content">
+    <p class="eyebrow">Recommended For You</p>
+    <h2>My Courses</h2>
+
+    <div id="courses-list" class="courses-list">
+      <p class="courses-loading">Loading courses...</p>
+    </div>
+  </div>
+</article>
+
+          <div>
+            <p class="eyebrow">Keep Learning</p>
+            <h2>My Courses</h2>
+
+            <p>
+              Continue lessons selected for your age and learning level.
+            </p>
+
+            <a href="courses.html" class="learning-button">
+              Explore Courses
+            </a>
+          </div>
+        </article>
+
+        <article class="learning-card games-card">
+          <div class="learning-icon">🎮</div>
+
+          <div>
+            <p class="eyebrow">Learn Through Play</p>
+            <h2>My Games</h2>
+
+            <p>
+              Practice creativity, logic and AI skills through fun games.
+            </p>
+
+            <a href="games.html" class="learning-button">
+              Play Games
+            </a>
+          </div>
+        </article>
+
+        <article class="learning-card habits-card">
+          <div class="learning-icon">📅</div>
+
+          <div>
+            <p class="eyebrow">Daily Progress</p>
+            <h2>Habit Builder</h2>
+
+            <p>
+              Complete daily learning habits and grow your streak.
+            </p>
+
+            <a href="habit-builder.html" class="learning-button">
+              View Habits
+            </a>
+          </div>
+        </article>
+
+        <article class="learning-card badges-card">
+          <div class="learning-icon">🏆</div>
+
+          <div>
+            <p class="eyebrow">Achievements</p>
+            <h2>My Badges</h2>
+
+            <p>
+              Unlock rewards by completing lessons, games and habits.
+            </p>
+
+            <a href="#" class="learning-button">
+              View Badges
+            </a>
+          </div>
+        </article>
+
+      </section>
+
+      <section class="progress-panel">
+        <div>
+          <p class="eyebrow">Weekly Journey</p>
+          <h2>Learning Progress</h2>
+        </div>
+
+        <div class="progress-empty">
+          <span>📈</span>
+
+          <div>
+            <strong>No learning activity yet</strong>
+            <p>Start a course or game to see progress here.</p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+<script src="../js/auth-guard.js"></script>
+  <script src="../js/api.js"></script>
+  <script src="../js/child-dashboard.js"></script>
+</body>
+</html>
